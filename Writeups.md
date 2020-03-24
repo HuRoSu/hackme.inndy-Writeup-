@@ -1,5 +1,5 @@
 # Hackme Inndy Writeups
-#Misc
+# Misc
 ## 1.flag
 Description
 All flags are in this format:
@@ -19,7 +19,7 @@ Unix系統用Hexdump或是直接使用strings
 用正規表示式配合cat grep去排除後取得Flag
 `cat flag|grep -o "FLAG{[a-Z0-9]*}"`
 
-#Web
+# Web
 ## 15.hide and seek
 點開後會到首頁
 直接看原始碼就能找到Flag
