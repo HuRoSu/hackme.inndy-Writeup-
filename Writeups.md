@@ -31,7 +31,8 @@ Unix系統用Hexdump或是直接使用strings<br>
 出現<br>
 `ping: flag.php`<br>
 `index.php: Name or service not known`<br>
-所以要去cat flag.php<br>
+發現flag<br>
+所以去嘗試cat flag.php<br>
 不過cat被禁用 只要cat以外的讀取文件都能用<br>
 像是more less等<br>
 還需要考慮到的是flag也被禁<br>
