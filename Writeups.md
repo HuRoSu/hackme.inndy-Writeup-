@@ -39,3 +39,19 @@ Unix系統用Hexdump或是直接使用strings<br>
 所以需要用``*``來省略字母<br>
 因此輸入`` `more f*` ``來取得Falg<br>
 
+# Reversing
+## 41.helloworld
+下載後先上`chmod +x helloworld`使檔案可執行
+如果是64bit的Unix系統 可能無法跑
+用`file helloworld`檢查檔案發現是32bit的
+可以`apt install lib32ncurses5`去下載讓64能跑32
+接著一樣反組譯 這邊是用objdump
+Windows一樣能用IDA
+下objdump指令`objdump -M intel -d ./helloworld`
+objdump指令說明
+-M disassembler options 並選用intel語法
+-d disassemble
+會發現在80484D8有`cmp eax,0x12b9b0a1`
+cmp為比較指令 得知它要比較是否為0x12b9b0a1
+將hex轉dec後得知為314159265
+接著跑./helloworld輸入數字 得到Flag
