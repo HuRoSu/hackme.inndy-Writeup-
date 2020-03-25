@@ -24,3 +24,9 @@ Unix系統用Hexdump或是直接使用strings<br>
 點開後會到首頁<br>
 直接看原始碼就能找到Flag<br>
 
+## 19.ping
+一個command injection
+從黑名單知道沒有擋`` ` ``
+先正常ls查看
+
+
