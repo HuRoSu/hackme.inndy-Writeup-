@@ -29,8 +29,8 @@ Unix系統用Hexdump或是直接使用strings<br>
 從黑名單知道沒有擋`` ` ``<br>
 先正常ls查看`` `ls` ``<br>
 出現<br>
-`ping: flag.php
-index.php: Name or service not known`
+`ping: flag.php`
+`index.php: Name or service not known`
 所以要去cat flag.php<br>
 不過cat被禁用 只要cat以外的讀取文件都能用<br>
 像是more less等<br>
