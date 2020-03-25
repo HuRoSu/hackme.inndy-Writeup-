@@ -25,8 +25,16 @@ Unix系統用Hexdump或是直接使用strings<br>
 直接看原始碼就能找到Flag<br>
 
 ## 19.ping
-一個command injection
-從黑名單知道沒有擋`` ` ``
-先正常ls查看
-
+一個command injection<br>
+從黑名單知道沒有擋`` ` ``<br>
+先正常ls查看`` `ls` ``<br>
+出現<br>
+`ping: flag.php
+index.php: Name or service not known`
+所以要去cat flag.php<br>
+不過cat被禁用 只要cat以外的讀取文件都能用<br>
+像是more less等<br>
+還需要考慮到的是flag也被禁<br>
+所以需要用``*``來省略字母<br>
+因此輸入```more f*```來取得Falg<br>
 
