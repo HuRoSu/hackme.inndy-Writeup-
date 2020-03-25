@@ -36,6 +36,6 @@ Unix系統用Hexdump或是直接使用strings<br>
 不過cat被禁用 只要cat以外的讀取文件都能用<br>
 像是more less等<br>
 還需要考慮到的是flag也被禁<br>
-所以需要用``*``來省略字母<br>
+所以需要用`` * ``來省略字母<br>
 因此輸入`` `more f*` ``來取得Falg<br>
 
