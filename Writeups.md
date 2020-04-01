@@ -39,6 +39,10 @@ Unix系統用Hexdump或是直接使用strings<br>
 所以需要用``*``來省略字母<br>
 因此輸入`` `more f*` ``來取得Falg<br>
 
+## 20.scoreboard
+對Scoreboard這個Web做caching
+會發現在response header的地方有個HTTP header fields的名子為x-flag
+
 # Reversing
 ## 41.helloworld
 下載後先上`chmod +x helloworld`使檔案可執行<br>
