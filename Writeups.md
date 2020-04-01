@@ -40,8 +40,15 @@ Unix系統用Hexdump或是直接使用strings<br>
 因此輸入`` `more f*` ``來取得Falg<br>
 
 ## 20.scoreboard
-對Scoreboard這個Web做caching
-會發現在response header的地方有個HTTP header fields的名子為x-flag
+對Scoreboard這個Web做caching<br>
+會發現在response header的地方有個HTTP header fields的名子為x-flag<br>
+
+## 31.dafuq-manager 1
+可以知道guest登入後cookie會多出一個show_hidden<br>
+而show_hidden的值為no<br>
+可以猜把值改yes可以顯示隱藏的資料<br>
+所以就利用Edit Cookie的程式將show_hidden的值改為yes<br>
+第一題的Flag就在good.job.here.is.your.hidden.flag-1.txt<br>
 
 # Reversing
 ## 41.helloworld
