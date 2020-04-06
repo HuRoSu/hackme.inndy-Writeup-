@@ -66,3 +66,9 @@ objdump指令說明<br>
 cmp為比較指令 得知它要比較是否為0x12b9b0a1<br>
 將hex轉dec後得知為314159265<br>
 接著跑./helloworld輸入數字 得到Flag<br>
+
+# Pwn
+
+
+# Crypto
+
