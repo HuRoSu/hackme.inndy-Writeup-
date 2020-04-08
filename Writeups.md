@@ -73,21 +73,35 @@ cmp為比較指令 得知它要比較是否為0x12b9b0a1<br>
 就能cat到flag了  
 
 ## 59.ROP
-利用ROPGadge來生成shellcode
-用`ROPgadge --binary rop --ropchain`來生成
-ROPgadge binary來指定檔案
-ropchain來生成code
-再用vim或nano等編輯改成pwntools格式
-把pack('<I',刪除改成p32
-在分析padding大小
-分析padding可以用gdb的插件peda
-下`pattc 100`100或其他數量來測試
-再來下carshoff來看offset大小 得知要padding 16
-或是在另外開一個terminal來下pwntools的cyclic分析
-再用cyclic_find來看offset大小
-最後把在前面的p=''改成'A'* 16塞滿offset
-在remote到7704 port就拿到shell
-
+利用ROPGadge來生成shellcode  
+用`ROPgadge --binary rop --ropchain`來生成  
+ROPgadge binary來指定檔案  
+ropchain來生成code  
+再用vim或nano等編輯改成pwntools格式  
+把pack('<I',刪除改成p32  
+在分析padding大小  
+分析padding可以用gdb的插件peda  
+下`pattc 100`100或其他數量來測試  
+再來下carshoff來看offset大小 得知要padding 16  
+或是在另外開一個terminal來下pwntools的cyclic分析  
+再用cyclic_find來看offset大小  
+最後把在前面的p=''改成'A'* 16塞滿offset  
+在remote到7704 port就拿到shell  
+  
+  
+## 61.toooomuch
+先分析offset大小 得知為28  
+反編譯得知print_flag的function位址為804863B  
+直接對804863B這個位址送shellcode  
+在pwn裡偵測到：後送'a'* 28+p32(0x804863B)+asm(shellcraft.i386.linux.sh())  
+利用pwntools裡的shellcraft來生成shell  
+最後下interactive來進行交互  
+  
+  
+## 62.toooomuch-2
+題目已經給出Buffer Overflow的點為0x8048560了  
+直接利用pwntools的shellcraft丟過去就能拿到shell了  
+offset大小一樣  
 
 
 
