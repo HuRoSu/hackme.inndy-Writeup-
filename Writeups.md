@@ -113,8 +113,8 @@ offset大小一樣
   
   
 ## 82.r u kidding
-由EKZF全部移一位得到FLAG得知為凱薩加密
-解密後得出Flag
+由EKZF全部移一位得到FLAG得知為凱薩加密  
+解密後得出Flag  
 
 
 
