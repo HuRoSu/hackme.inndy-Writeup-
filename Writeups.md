@@ -68,6 +68,17 @@ cmp為比較指令 得知它要比較是否為0x12b9b0a1<br>
 接著跑./helloworld輸入數字 得到Flag<br>
 
 # Pwn
+## 57.catflag
+基本題 nc連上去後就可以直接下ls  
+就能cat到flag了  
+
+## 59.ROP
+利用ROPGadge來生成shell
+用`ROPgadge --binary rop --ropchain`來生成
+ROPgadge binary來指定檔案
+ropchain來生成code
+再用vim或nano等編輯改成pwntools格式
+
 
 
 # Crypto
