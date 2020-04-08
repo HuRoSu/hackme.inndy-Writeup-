@@ -77,7 +77,7 @@ cmp為比較指令 得知它要比較是否為0x12b9b0a1<br>
 用`ROPgadge --binary rop --ropchain`來生成  
 ROPgadge binary來指定檔案  
 ropchain來生成code  
-再用vim或nano等編輯改成pwntools格式  
+再用vim或nano等編輯器改成pwntools格式  
 把pack('<I',刪除改成p32  
 在分析padding大小  
 分析padding可以用gdb的插件peda  
@@ -85,8 +85,9 @@ ropchain來生成code
 再來下carshoff來看offset大小 得知要padding 16  
 或是在另外開一個terminal來下pwntools的cyclic分析  
 再用cyclic_find來看offset大小  
-最後把在前面的p=''改成'A'* 16塞滿offset  
-在remote到7704 port就拿到shell  
+最後把在前面的p=''改成p = 'A'* 16塞滿offset
+一樣加上interactive進行交互  
+在remote到7704 port就拿到shell
   
   
 ## 61.toooomuch
@@ -102,19 +103,18 @@ ropchain來生成code
 題目已經給出Buffer Overflow的點為0x8048560了  
 直接利用pwntools的shellcraft丟過去就能拿到shell了  
 offset大小一樣  
-
-
-
-
-
-
-
+  
+  
 # Crypto
-
-
-
-
-
+## 81.easy
+看這串數字得知是16進制  
+將16進制轉為ascii得到base64加密後的一串字  
+在把base64解密後得到flag  
+  
+  
+## 82.r u kidding
+由EKZF全部移一位得到FLAG得知為凱薩加密
+解密後得出Flag
 
 
 
