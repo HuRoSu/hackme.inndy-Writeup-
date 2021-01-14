@@ -97,6 +97,10 @@ ropchain來生成code
 在pwn裡偵測到：後送'a'* 28+p32(0x804863B)+asm(shellcraft.i386.linux.sh())  
 利用pwntools裡的shellcraft來生成shell  
 最後下interactive來進行交互  
+\*在python3中 str與bytes為兩種不同類型，與python2不同
+因此在送'a'* 28時需要轉換成bytes
+用latin-1編碼
+bytes('a','latin-1')* 28
   
   
 ## 62.toooomuch-2
